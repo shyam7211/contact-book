@@ -12,7 +12,7 @@ const createContact = (req,res)=>{
     console.log("The request body is", req.body);
     const {name, email, phone} = req.body;
     if( !name || !email || !phone){
-        req.status(500);
+        res.status(400);
         throw new Error("All fields are necessary!!");
     }
     res.status(201).json({ message: "Create contacts." })

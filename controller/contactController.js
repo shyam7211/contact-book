@@ -8,7 +8,7 @@ const getContacts = (req,res)=>{
 //@desc Create contact
 //@route POST /api/contacts/
 //@access Public
-const postContact = (req,res)=>{
+const createContact = (req,res)=>{
     res.status(201).json({ message: "Create contacts." })
 }
 
@@ -22,7 +22,7 @@ const getContact = (req,res)=>{
 //@desc Get all contacts
 //@route GET /api/contacts
 //@access Public
-const putContact = (req,res)=>{
+const updateContact = (req,res)=>{
     res.status(200).json({ message: `Update contact of ${req.params.id}` })
 }
 
@@ -36,7 +36,7 @@ const deleteContact = (req,res)=>{
 module.exports = {
     getContacts,
     getContact,
-    putContact,
-    postContact,
+    updateContact,
+    createContact,
     deleteContact
 }
